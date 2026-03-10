@@ -4,8 +4,8 @@ author:
 - Taylor Reiter
 - N. Tessa Pierce
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -227,7 +227,7 @@ as our input counts. Instead, it can be helpful to sort and filter by adjusted
 p value or log2 Fold Change:
 
 ```{r}
-res_sig <- subset(res, padj<.05)
+res_sig <- subset(res, padj<.1)
 res_lfc <- subset(res_sig, abs(log2FoldChange) > 1) 
 ```
 
